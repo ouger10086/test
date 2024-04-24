@@ -7,6 +7,26 @@ namespace kitronik_motor_driver {
 	* micro:bit motor driver blocks 
 	************************************************************************************************************************************************/
     /*Note that Forward and reverse are slightly arbitrary, as it depends on how the motor is wired...*/
+    
+    
+    /**
+     * BLINKIT initialize
+     */
+    //% blockId="BLINKIT_I2C_init" block="初始化BLINKIT"
+    //% weight=100 blockGap=8
+    //% parts=BLINKIT_I2C trackArgs=0
+    export function init() {
+        serial.redirect(
+            SerialPin.P8,
+            SerialPin.P12,
+            BaudRate.BaudRate9600
+        )
+    }
+    
+    
+    
+    
+    
     export enum MotorDirection {
         //% block="forward"
         Forward,
@@ -39,11 +59,14 @@ namespace kitronik_motor_driver {
         /*first convert 0-100 to 0-1024 (approx) We wont worry about the lsat 24 to make life simpler*/
         let OutputVal = Math.clamp(0, 100, speed) * 10;
 
+        let PosNum: number = Motors.Motor1; // directionInt 现在是数字 1
+        
+
         switch (motor) {
-            case Motors.Motor1: /*Motor 1 uses Pins 8 and 12*/
+            case Motors.Motor1: 
 
                 break;
-            case Motors.Motor2: /*Motor 2 uses Pins 0 and 16*/
+            case Motors.Motor2: 
 
                 break;
         }
