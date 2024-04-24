@@ -36,32 +36,32 @@ namespace kitronik_motor_driver {
 
     export enum Led8x8 {
         //%blockId=kitronik_motordriver_motor_one
-        //% block="motor 1"
-        Motor1,
+        //% block="1"
+        Led8x81,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 2"
-        Motor2,
+        //% block="2"
+        Led8x82,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 3"
-        Motor3,
+        //% block="3"
+        Led8x83,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 4"
-        Motor4,
+        //% block="4"
+        Led8x84,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 5"
-        Motor5,
+        //% block="5"
+        Led8x85,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 6"
-        Motor6,
+        //% block="6"
+        Led8x86,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 7"
-        Motor7,
+        //% block="7"
+        Led8x87,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 8"
-        Motor8,
+        //% block="8"
+        Led8x88,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 9"
-        Motor9,      
+        //% block="9"
+        Led8x89,
     }
 
 
@@ -80,14 +80,14 @@ namespace kitronik_motor_driver {
         /*first convert 0-100 to 0-1024 (approx) We wont worry about the lsat 24 to make life simpler*/
         let OutputVal = Math.clamp(0, 100, speed) * 10;
 
-        let PosNum: number = Led8x8.Motor1; // directionInt 现在是数字 1
+        let PosNum: number = Led8x8.Led8x81; // directionInt 现在是数字 1
         
 
         switch (motor) {
-            case Led8x8.Motor1:
+            case Led8x8.Led8x81:
 
                 break;
-            case Led8x8.Motor2:
+            case Led8x8.Led8x82:
 
                 break;
         }
