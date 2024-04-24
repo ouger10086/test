@@ -1,6 +1,6 @@
 {
-  "kitronik_motor_driver.MotorDirection.Forward|block": "vooruit",
-  "kitronik_motor_driver.MotorDirection.Reverse|block": "achteruit",
+  "kitronik_motor_driver.Led8x8Direction.Forward|block": "vooruit",
+  "kitronik_motor_driver.Led8x8Direction.Reverse|block": "achteruit",
   "kitronik_motor_driver.Motors.Motor1|block": "motor 1",
   "kitronik_motor_driver.Motors.Motor2|block": "motor 2",
   "kitronik_motor_driver.motorOff|block": "zet %motor|uit",

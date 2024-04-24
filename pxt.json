@@ -12,9 +12,7 @@
         "_locales/nl/pxt-kitronik-motor-driver-jsdoc-strings.json",
         "_locales/nl/pxt-kitronik-motor-driver-strings.json"
     ],
-    "testFiles": [
-        "tests.ts"
-    ],
+    "testFiles": [],
     "public": true,
     "targetVersions": {
         "target": "6.0.26",
