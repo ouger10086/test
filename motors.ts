@@ -34,7 +34,7 @@ namespace kitronik_motor_driver {
         Reverse
     }
 
-    export enum Motors {
+    export enum Led8x8 {
         //%blockId=kitronik_motordriver_motor_one
         //% block="motor 1"
         Motor1,
@@ -74,20 +74,20 @@ namespace kitronik_motor_driver {
 	 * @param speed how fast to spin the motor
      */
     //% blockId=kitronik_motordriver_motor_on
-    //% block="8x8%motor|on direction %dir|speed %speed"
+    //% block="8x8,位置%motor|动画%dir|速度 %speed"
     //% speed.min=0 speed.max=100
-    export function motorOn(motor: Motors, dir: MotorDirection, speed: number): void {
+    export function motorOn(motor: Led8x8, dir: MotorDirection, speed: number): void {
         /*first convert 0-100 to 0-1024 (approx) We wont worry about the lsat 24 to make life simpler*/
         let OutputVal = Math.clamp(0, 100, speed) * 10;
 
-        let PosNum: number = Motors.Motor1; // directionInt 现在是数字 1
+        let PosNum: number = Led8x8.Motor1; // directionInt 现在是数字 1
         
 
         switch (motor) {
-            case Motors.Motor1: 
+            case Led8x8.Motor1:
 
                 break;
-            case Motors.Motor2: 
+            case Led8x8.Motor2:
 
                 break;
         }
