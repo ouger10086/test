@@ -23,9 +23,12 @@ namespace kitronik_motor_driver {
         )
     }
     
-    
-    
-    
+    function asciiToChar(asciiCode: number): string {
+        // 使用String.fromCharCode方法将ASCII码转换为字符  
+        return String.fromCharCode(asciiCode);
+    }
+
+
     
     export enum MotorDirection {
         //% block="forward"
@@ -34,34 +37,38 @@ namespace kitronik_motor_driver {
         Reverse
     }
 
+
+
+
+
     export enum Led8x8 {
         //%blockId=kitronik_motordriver_motor_one
-        //% block="motor 1"
-        Motor1,
+        //% block="1"
+        Led8x81,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 2"
-        Motor2,
+        //% block="2"
+        Led8x82,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 3"
-        Motor3,
+        //% block="3"
+        Led8x83,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 4"
-        Motor4,
+        //% block="4"
+        Led8x84,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 5"
-        Motor5,
+        //% block="5"
+        Led8x85,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 6"
-        Motor6,
+        //% block="6"
+        Led8x86,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 7"
-        Motor7,
+        //% block="7"
+        Led8x87,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 8"
-        Motor8,
+        //% block="8"
+        Led8x88,
         //%blockId=kitronik_motordriver_motor_two
-        //% block="motor 9"
-        Motor9,      
+        //% block="9"
+        Led8x89,
     }
 
 
@@ -76,20 +83,36 @@ namespace kitronik_motor_driver {
     //% blockId=kitronik_motordriver_motor_on
     //% block="8x8,位置%motor|动画%dir|速度 %speed"
     //% speed.min=0 speed.max=100
-    export function motorOn(motor: Led8x8, dir: MotorDirection, speed: number): void {
+    export function Led8x8_1(Led8x8: Led8x8, dir: MotorDirection, speed: number): void {
         /*first convert 0-100 to 0-1024 (approx) We wont worry about the lsat 24 to make life simpler*/
-        let OutputVal = Math.clamp(0, 100, speed) * 10;
+        const asciiCode = Led8x8+32; // ASCII码65对应大写字母'A'
+        const char = asciiToChar(asciiCode);
 
-        let PosNum: number = Led8x8.Motor1; // directionInt 现在是数字 1
         
+        let projectInfo = "7e30" + char + "#"
+        serial.writeString(projectInfo);
 
-        switch (motor) {
-            case Led8x8.Motor1:
+    }
 
-                break;
-            case Led8x8.Motor2:
+    /**
+ * Turns on motor specified by eMotors in the direction specified
+ * by eDirection, at the requested speed 
+ *
+ * @param motor which motor to turn on
+ * @param dir   which direction to go
+ * @param speed how fast to spin the motor
+ */
+    //% blockId=kitronik_motordriver_motor_on
+    //% block="8x8,位置%motor|动画%dir|速度 %speed"
+    //% speed.min=0 speed.max=100
+    export function Led8x8_2(Led8x8: Led8x8, dir: MotorDirection, speed: number): void {
+        /*first convert 0-100 to 0-1024 (approx) We wont worry about the lsat 24 to make life simpler*/
+        const asciiCode = Led8x8 + 32; // ASCII码65对应大写字母'A'
+        const char = asciiToChar(asciiCode);
 
-                break;
-        }
+
+        let projectInfo = "7e30" + char + "#"
+        serial.writeString(projectInfo);
+
     }
 }
