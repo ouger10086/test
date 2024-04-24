@@ -40,7 +40,28 @@ namespace kitronik_motor_driver {
         Motor1,
         //%blockId=kitronik_motordriver_motor_two
         //% block="motor 2"
-        Motor2  
+        Motor2,
+        //%blockId=kitronik_motordriver_motor_two
+        //% block="motor 3"
+        Motor3,
+        //%blockId=kitronik_motordriver_motor_two
+        //% block="motor 4"
+        Motor4,
+        //%blockId=kitronik_motordriver_motor_two
+        //% block="motor 5"
+        Motor5,
+        //%blockId=kitronik_motordriver_motor_two
+        //% block="motor 6"
+        Motor6,
+        //%blockId=kitronik_motordriver_motor_two
+        //% block="motor 7"
+        Motor7,
+        //%blockId=kitronik_motordriver_motor_two
+        //% block="motor 8"
+        Motor8,
+        //%blockId=kitronik_motordriver_motor_two
+        //% block="motor 9"
+        Motor9,      
     }
 
 
